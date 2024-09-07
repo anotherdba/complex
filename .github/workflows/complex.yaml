@@ -28,6 +28,8 @@ jobs:
             - name: Step two
               run: date
     job4:
-        name: depends
-        runs-on: macos-latest
         needs: [job1, job2, job3]
+        runs-on: macos-latest
+        steps:
+        - run: date
+        
